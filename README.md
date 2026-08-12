@@ -1,60 +1,60 @@
-# Biblo — download
+# Biblo — downloads
 
-**Biblo** è un'applicazione per Windows che legge i PDF che hai già sul
-computer, li indicizza in locale e ti lascia interrogarli in linguaggio
-naturale: ogni risposta cita il documento e la pagina da cui viene.
+**Biblo** is a Windows application that reads the PDFs already sitting on your
+computer, indexes them locally and lets you question them in plain language:
+every answer cites the document and the page it came from.
 
-Sito: **https://biblo.app** · Scarica: **[ultima versione](../../releases/latest)**
+Website: **https://biblo.app** (also in Italian, French, Spanish and German) ·
+**[Download the latest version](../../releases/latest)**
 
 ---
 
-## Che cos'è questo repository
+## What this repository is
 
-Contiene **solo i file da scaricare**: l'installatore di Windows e le note di
-rilascio. Il codice sorgente di Biblo non è pubblico e non si trova qui.
+It holds **the downloadable files only**: the Windows installer and the release
+notes. Biblo's source code is not public and is not here.
 
-## Installazione
+## Installing
 
-1. Scarica `Biblo_<versione>_x64-setup.exe` dall'[ultima release](../../releases/latest).
-2. Aprilo e segui l'installazione. Non servono permessi di amministratore:
-   l'applicazione si installa per il tuo utente.
-3. Al primo avvio Biblo ti chiede una chiave **Cerebras** (gratuita) per la
-   parte di intelligenza artificiale.
+1. Download `Biblo_<version>_x64-setup.exe` from the
+   [latest release](../../releases/latest).
+2. Run it and follow the installer. No administrator rights are needed: Biblo
+   installs for your user account.
+3. On first launch Biblo asks for a **Cerebras** API key (free) to power the
+   AI side.
 
-### Windows dirà «Autore sconosciuto»
+### Windows will say "Unknown publisher"
 
-L'installatore non è ancora firmato con un certificato commerciale, quindi
-Windows mostra un avviso di protezione al primo avvio. Per procedere:
-**Ulteriori informazioni** → **Esegui comunque**.
+The installer is not yet signed with a commercial certificate, so Windows shows
+a protection warning the first time you run it. To continue:
+**More info** → **Run anyway**.
 
-Se vuoi verificare di avere scaricato esattamente il file pubblicato qui,
-confronta l'impronta SHA-256 (la trovi nelle note di ogni release) con quella
-del tuo file:
+To confirm you downloaded exactly the file published here, compare the SHA-256
+fingerprint (published in every release's notes) with your own copy:
 
 ```powershell
 (Get-FileHash .\Biblo_1.0.0_x64-setup.exe -Algorithm SHA256).Hash
 ```
 
-## Requisiti
+## Requirements
 
-- Windows 10 o 11 a 64 bit
-- circa 2,5 GB di spazio su disco
-- nessuna scheda grafica: tutto gira sul processore
-- una chiave Cerebras (piano gratuito) per la chat
+- Windows 10 or 11, 64-bit
+- about 2.5 GB of free disk space
+- no graphics card: everything runs on the processor
+- a Cerebras API key (free tier) for the chat
 
-## Disinstallazione
+## Uninstalling
 
-Da *Impostazioni → App*, oppure con `uninstall.exe` nella cartella di
-installazione. I tuoi PDF restano dove sono: vengono rimossi solo
-l'applicazione e i dati che ha prodotto lei (`%APPDATA%\Biblo`).
+From *Settings → Apps*, or with `uninstall.exe` in the installation folder.
+Your PDFs stay where they are: only the application and the data it produced
+(`%APPDATA%\Biblo`) are removed.
 
 ## Privacy
 
-L'indicizzazione dei documenti avviene sul tuo computer: i file non vengono
-caricati da nessuna parte. Quando fai una domanda, al modello linguistico
-viene inviato solo il brano necessario a rispondere.
-Informativa completa: **https://biblo.app/it/privacy.html**
+Documents are indexed on your own computer: no file is uploaded anywhere. When
+you ask a question, only the passage needed to answer it is sent to the
+language model. Full policy: **https://biblo.app/en/privacy.html**
 
-## Segnalazioni
+## Feedback
 
-Problemi o proposte: apri una *issue* in questo repository.
+Problems or suggestions: open an issue in this repository.
