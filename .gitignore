@@ -1,0 +1,6 @@
+# Gli installatori NON vanno committati: pesano centinaia di MB e git non
+# e il posto giusto. Si caricano come "asset" della release (vedi README).
+*.exe
+*.msi
+*.zip
+*.onnx
