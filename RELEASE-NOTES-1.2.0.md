@@ -65,14 +65,26 @@ accept them once.**
 Your library, settings and conversations are kept: install over the existing
 version.
 
+On a Mac, open the `.dmg` and drag Biblo into Applications. The app is
+signed and notarized by Apple, so it opens with a double click: macOS only
+asks once whether to open an app downloaded from the internet.
+
 ### Verifying the file
 
-| | |
-|---|---|
-| File | `Biblo_1.2.0_x64-setup.exe` |
-| Size | 565.5 MB (592,948,479 bytes) — 20 MB smaller than 1.1.1 |
-| SHA-256 | `E04E6D4D00BA388F16AA8AA6178D2C760DABBC09DE6A91D4A4143FE5C0EE7C5F` |
+| | Windows | Mac |
+|---|---|---|
+| File | `Biblo_1.2.0_x64-setup.exe` | `Biblo_1.2.0_aarch64.dmg` |
+| Size | 565.5 MB (592,948,479 bytes) — 20 MB smaller than 1.1.1 | 606.0 MB (635,443,646 bytes) |
+| SHA-256 | `E04E6D4D00BA388F16AA8AA6178D2C760DABBC09DE6A91D4A4143FE5C0EE7C5F` | `A2B2F92B41EE35603876DD1C0B16529C65258C0D4F0C9DB8B47E2F07D5C90DA3` |
+
+On Windows, in PowerShell:
 
 ```powershell
 (Get-FileHash .\Biblo_1.2.0_x64-setup.exe -Algorithm SHA256).Hash
+```
+
+On a Mac, in Terminal (it prints the same value in lowercase):
+
+```bash
+shasum -a 256 Biblo_1.2.0_aarch64.dmg
 ```
