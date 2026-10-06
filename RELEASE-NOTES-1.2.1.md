@@ -40,14 +40,26 @@ into Italian, and tells you clearly when the free daily AI quota runs out.
 Your library, settings and conversations are kept: install over the existing
 version. On Windows, Biblo is also available from the Microsoft Store.
 
+On a Mac, Biblo 1.2.0 offers this update by itself and installs it in place.
+For a new install, open the `.dmg` and drag Biblo into Applications: the app
+is signed and notarized by Apple, so it opens with a double click.
+
 ### Verifying the file
 
-| | |
-|---|---|
-| File | `Biblo_1.2.1_x64-setup.exe` |
-| Size | 565.5 MB (592,989,958 bytes) |
-| SHA-256 | `6F3076285986F1E544880F6B86373DFE1AE9B4DCEE07A494CAE356D45041A1BF` |
+| | Windows | Mac |
+|---|---|---|
+| File | `Biblo_1.2.1_x64-setup.exe` | `Biblo_1.2.1_aarch64.dmg` |
+| Size | 565.5 MB (592,989,958 bytes) | 606.0 MB (635,483,363 bytes) |
+| SHA-256 | `6F3076285986F1E544880F6B86373DFE1AE9B4DCEE07A494CAE356D45041A1BF` | `C18A576600D92B52DE93879B23DDDE8C0F648BD6F5C00B40BFB80E95232B6B75` |
+
+On Windows, in PowerShell:
 
 ```powershell
 (Get-FileHash .\Biblo_1.2.1_x64-setup.exe -Algorithm SHA256).Hash
+```
+
+On a Mac, in Terminal (it prints the same value in lowercase):
+
+```bash
+shasum -a 256 Biblo_1.2.1_aarch64.dmg
 ```
