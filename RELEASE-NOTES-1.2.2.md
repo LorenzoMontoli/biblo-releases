@@ -30,14 +30,27 @@ title are now named in the app language.
 Your library, settings and conversations are kept: install over the existing
 version. On Windows, Biblo is also available from the Microsoft Store.
 
+On a Mac, Biblo 1.2.0 and later offer this update by themselves and install
+it in place. For a new install, open the `.dmg` and drag Biblo into
+Applications: the app is signed and notarized by Apple, so it opens with a
+double click.
+
 ### Verifying the file
 
-| | |
-|---|---|
-| File | `Biblo_1.2.2_x64-setup.exe` |
-| Size | 565.7 MB (593,153,252 bytes) |
-| SHA-256 | `1AE2E2919484745B1E72374FBF4A48816DE162610532B5BE91CF8E1CCDED428A` |
+| | Windows | Mac |
+|---|---|---|
+| File | `Biblo_1.2.2_x64-setup.exe` | `Biblo_1.2.2_aarch64.dmg` |
+| Size | 565.7 MB (593,153,252 bytes) | 606.2 MB (635,627,447 bytes) |
+| SHA-256 | `1AE2E2919484745B1E72374FBF4A48816DE162610532B5BE91CF8E1CCDED428A` | `316DDC61FD145D95194E48633ED05639292DADC26A69CA482E488310D079B221` |
+
+On Windows, in PowerShell:
 
 ```powershell
 (Get-FileHash .\Biblo_1.2.2_x64-setup.exe -Algorithm SHA256).Hash
+```
+
+On a Mac, in Terminal (it prints the same value in lowercase):
+
+```bash
+shasum -a 256 Biblo_1.2.2_aarch64.dmg
 ```
